@@ -217,8 +217,14 @@ console.log(pricesTV);
 
 //---
 // Opdracht 2a: Hoeveel tv's zijn er al verkocht? Schrijf een script dat dit berekent.
-// Log de uitkomst in de console.
-//1. Die Frage: wieviele von den Fernsehern wurden insgesamt verkauft? -Gedankengang:
-//2. erst muss ich die rausfiltern, die verkauft wurden (filter()). Hierfuer muss ich das rausgefilterte
-// in eine neue [] packen (let !!!)
-//3. die Anzahl derer, die ich heraus gefiltert habe, muss ich dann loggen. denk an : ....length.
+
+let numberOfTvsSold = 0;
+
+for (let i = 0; i < inventory.length; i++) {
+    numberOfTvsSold += inventory[i].sold;
+}
+console.log(numberOfTvsSold);
+// einde opdracht 2a.
+
+
+// Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.
