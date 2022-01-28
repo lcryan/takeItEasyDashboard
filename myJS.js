@@ -228,3 +228,4 @@ console.log(numberOfTvsSold);
 
 
 // Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.
+
