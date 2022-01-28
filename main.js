@@ -226,6 +226,17 @@ for (let i = 0; i < inventory.length; i++) {
 console.log(numberOfTvsSold);
 // einde opdracht 2a.
 
-
 // Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.
+
+const tvsSold = document.getElementById('soldTvs')
+const tvsSoldHeader = document.createElement('h1')
+tvsSoldHeader.textContent = "The amount of TVs sold today"
+
+const totalSoldTvs = document.createElement('h2')
+totalSoldTvs.textContent = numberOfTvsSold
+
+tvsSold.appendChild(tvsSoldHeader);
+tvsSold.appendChild(totalSoldTvs);
+// -------- color - green - styles.css under 5-7;
+//einde opdracht 2b.
 
