@@ -163,38 +163,62 @@ const inventory = [
 ];
 
 //Opdracht 1 - Array Methoden
-// Opdracht 1a: Gebruik een array-methode om een array te maken met alle tv-type namen. Log de uitkomst in de console.
-
-
+//---------------------------
+// Opdracht 1a: Gebruik een array-methode om een array te maken met alle tv-type namen.
+// Log de uitkomst in de console.
 const tvStock = inventory.map((tv) => {
     return tv.name;
 });
-
 console.log(tvStock);
 //einde opdracht 1a.
 
-// Opdracht 1b: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die volledig uitverkocht zijn. Log de uitkomst in de console.
-let soldOutItems = [];
+// Opdracht 1b: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten)
+// die volledig uitverkocht zijn. Log de uitkomst in de console.
+let soldoutItems = [];
 const soldOutTvs = inventory.filter((infoInventory) => {
     if (infoInventory.originalStock === infoInventory.sold) {
-        return soldOutItems;
+        return soldoutItems;
     }
 })
 console.log(soldOutTvs);
+//einde opdracht 1b
 
-// Opdracht 1c: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die over AmbiLight beschikken. Log de uitkomst in de console.
+// Opdracht 1c: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die over
+// AmbiLight beschikken. Log de uitkomst in de console.
 
 const tvsAmbi = inventory.filter((ambiDetails) => {
-   return ambiDetails.options.ambiLight === true
+    return ambiDetails.options.ambiLight === true
 });
 console.log(tvsAmbi);
+//einde opdracht 1c.
 
 // Opdracht 1d: Schrijf een functie die alle tv's van laagste naar hoogste prijs sorteert. Log de uitkomst in de console.
 
 let sortedTvByPrice = [];
 
-const pricesTV = inventory.sort((a, b) =>{
+const pricesTV = inventory.sort((a, b) => {
     return sortedTvByPrice = a.price - b.price;
 });
 
 console.log(pricesTV);
+// einde opdracht 1d.
+//---------------------------------------------------------//
+//Opdracht 2 - Elementen in de DOM plaatsen
+// Tip: wanneer we meerdere waardes uit een array willen terugbrengen tot één getal of één string,
+// gebruik je hier gewoon een oude vertrouwde for-loop voor!
+//
+// Opdracht 2a: Hoeveel tv's zijn er al verkocht? Schrijf een script dat dit berekent.
+// Log de uitkomst in de console.
+// Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.
+// Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf een script dat dit berekent.
+// Log de uitkomst in de console.
+// Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
+// Opdracht 2e: Geef in het rood weer hoeveel tv's er nog verkocht moeten worden.
+
+//---
+// Opdracht 2a: Hoeveel tv's zijn er al verkocht? Schrijf een script dat dit berekent.
+// Log de uitkomst in de console.
+//1. Die Frage: wieviele von den Fernsehern wurden insgesamt verkauft? -Gedankengang:
+//2. erst muss ich die rausfiltern, die verkauft wurden (filter()). Hierfuer muss ich das rausgefilterte
+// in eine neue [] packen (let !!!)
+//3. die Anzahl derer, die ich heraus gefiltert habe, muss ich dann loggen. denk an : ....length.
