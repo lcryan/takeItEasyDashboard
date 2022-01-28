@@ -191,3 +191,10 @@ console.log(tvsAmbi);
 
 // Opdracht 1d: Schrijf een functie die alle tv's van laagste naar hoogste prijs sorteert. Log de uitkomst in de console.
 
+let sortedTvByPrice = [];
+
+const pricesTV = inventory.sort((a, b) =>{
+    return sortedTvByPrice = a.price - b.price;
+});
+
+console.log(pricesTV);
