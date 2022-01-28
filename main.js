@@ -237,3 +237,5 @@ tvsSold.appendChild(totalSoldTvs);
 // -------- color - green - styles.css under 5-7;
 //einde opdracht 2b.
 
+//Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf een script dat dit berekent.
+// Log de uitkomst in de console.
