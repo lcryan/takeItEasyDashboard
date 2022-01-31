@@ -203,34 +203,36 @@ const pricesTV = inventory.sort((a, b) => {
 console.log(pricesTV);
 // einde opdracht 1d.
 //---------------------------------------------------------//
+
+
 //Opdracht 2 - Elementen in de DOM plaatsen
 // Tip: wanneer we meerdere waardes uit een array willen terugbrengen tot één getal of één string,
 // gebruik je hier gewoon een oude vertrouwde for-loop voor!
 //
-// Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf een script dat dit berekent.
-// Log de uitkomst in de console.
+
 // Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 // Opdracht 2e: Geef in het rood weer hoeveel tv's er nog verkocht moeten worden.
 
 //---
 // Opdracht 2a: Hoeveel tv's zijn er al verkocht? Schrijf een script dat dit berekent.
 
-let numberOfTvsSold = 0;
+let numberSalesTv = 0;
 
 for (let i = 0; i < inventory.length; i++) {
-    numberOfTvsSold += inventory[i].sold;
+    numberSalesTv += inventory[i].sold;
 }
-console.log(numberOfTvsSold);
+console.log(numberSalesTv);
 // einde opdracht 2a.
+
 
 // Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.
 
 const tvsSold = document.getElementById('soldTvs')
-const tvsSoldHeader = document.createElement('h1')
-tvsSoldHeader.textContent = "The amount of TVs sold today"
+const tvsSoldHeader = document.createElement('p1')
+tvsSoldHeader.textContent = "The amount of TVs sold today: "
 
-const totalSoldTvs = document.createElement('h2')
-totalSoldTvs.textContent = numberOfTvsSold
+const totalSoldTvs = document.createElement('p2')
+totalSoldTvs.textContent = numberSalesTv
 
 tvsSold.appendChild(tvsSoldHeader);
 tvsSold.appendChild(totalSoldTvs);
@@ -239,3 +241,27 @@ tvsSold.appendChild(totalSoldTvs);
 
 //Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf een script dat dit berekent.
 // Log de uitkomst in de console.
+
+let purchasedTvs = 0;
+
+for (let i = 0; i < inventory.length; i++) {
+    purchasedTvs += inventory[i].originalStock;
+}
+console.log(purchasedTvs);
+
+//eind opdracht 2c. -----------------------------------//
+
+
+// Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
+
+const tvsBought = document.getElementById('boughtTvs')
+const tvsBoughtHeader = document.createElement('p3')
+tvsBoughtHeader.textContent = "Our original stock is: "
+
+const total = document.createElement('p4')
+total.textContent = purchasedTvs
+
+tvsBought.appendChild(tvsBoughtHeader);
+tvsBought.appendChild(total);
+
+// eind opdracht 2d. ----------------------------------//
