@@ -166,18 +166,18 @@ const inventory = [
 //---------------------------
 // Opdracht 1a: Gebruik een array-methode om een array te maken met alle tv-type namen.
 // Log de uitkomst in de console.
-const tvStock = inventory.map((tv) => {
+const tvTypes = inventory.map((tv) => {
     return tv.name;
 });
-console.log(tvStock);
+console.log(tvTypes);
 //einde opdracht 1a.
 
 // Opdracht 1b: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten)
 // die volledig uitverkocht zijn. Log de uitkomst in de console.
-let soldoutItems = [];
+let soldOutItems = [];
 const soldOutTvs = inventory.filter((infoInventory) => {
     if (infoInventory.originalStock === infoInventory.sold) {
-        return soldoutItems;
+        return soldOutItems;
     }
 })
 console.log(soldOutTvs);
@@ -208,9 +208,7 @@ console.log(pricesTV);
 //Opdracht 2 - Elementen in de DOM plaatsen
 // Tip: wanneer we meerdere waardes uit een array willen terugbrengen tot één getal of één string,
 // gebruik je hier gewoon een oude vertrouwde for-loop voor!
-//
 
-// Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 // Opdracht 2e: Geef in het rood weer hoeveel tv's er nog verkocht moeten worden.
 
 //---
@@ -227,12 +225,14 @@ console.log(numberSalesTv);
 
 // Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.
 
-const tvsSold = document.getElementById('soldTvs')
-const tvsSoldHeader = document.createElement('p1')
-tvsSoldHeader.textContent = "The amount of TVs sold today: "
+const tvsSold = document.getElementById('soldTvs');
+const tvsSoldHeader = document.createElement('p1');
+tvsSoldHeader.textContent = "The amount of TVs sold today: ";
+tvsSoldHeader.setAttribute('id','sold-header');
 
-const totalSoldTvs = document.createElement('p2')
-totalSoldTvs.textContent = numberSalesTv
+const totalSoldTvs = document.createElement('p2');
+totalSoldTvs.textContent = numberSalesTv;
+totalSoldTvs.setAttribute('id', 'sold-color');
 
 tvsSold.appendChild(tvsSoldHeader);
 tvsSold.appendChild(totalSoldTvs);
@@ -254,14 +254,42 @@ console.log(purchasedTvs);
 
 // Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 
-const tvsBought = document.getElementById('boughtTvs')
-const tvsBoughtHeader = document.createElement('p3')
-tvsBoughtHeader.textContent = "Our original stock is: "
+const tvsBought = document.getElementById('boughtTvs');
+const tvsBoughtHeader = document.createElement('p3');
+tvsBoughtHeader.textContent = "Our original stock was: ";
+tvsBoughtHeader.setAttribute('id', 'header-bought');
 
-const total = document.createElement('p4')
-total.textContent = purchasedTvs
+const total = document.createElement('p4');
+total.textContent = purchasedTvs;
+total.setAttribute('id', 'purchased-color');
 
 tvsBought.appendChild(tvsBoughtHeader);
 tvsBought.appendChild(total);
 
 // eind opdracht 2d. ----------------------------------//
+
+//Opdracht 2e: Geef in het rood weer hoeveel tv's er nog verkocht moeten worden.
+
+//const tvsSold = document.getElementById('soldTvs');
+// const tvsSoldHeader = document.createElement('p1');
+// tvsSoldHeader.textContent = "The amount of TVs sold today: ";
+//
+// const totalSoldTvs = document.createElement('p2');
+// totalSoldTvs.textContent = numberSalesTv;
+//
+// tvsSold.appendChild(tvsSoldHeader);
+// tvsSold.appendChild(totalSoldTvs);
+
+const currentStock = document.getElementById('currentStock');
+const currentStockHeader = document.createElement('p5');
+currentStockHeader.textContent = "Our current stock is: ";
+currentStockHeader.setAttribute('id', 'header-stock');
+
+const totalResult = document.createElement('p6');
+totalResult.textContent = `${purchasedTvs - numberSalesTv}`;
+totalResult.setAttribute('id', 'totalStock-color');
+
+currentStock.appendChild(currentStockHeader);
+currentStock.appendChild(totalResult);
+
+
