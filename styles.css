@@ -1,35 +1,43 @@
 #sold-color {
     color: green;
-    font-size: 40px;
+    font-size: 30px;
     font-family: Tahoma, sans-serif;
     font-weight: bolder;
 }
 
 #sold-header {
-    font-size: 40px;
+    font-size: 30px;
     font-family: Tahoma, sans-serif;
 }
 
 #purchased-color {
     color: blue;
-    font-size: 40px;
+    font-size: 30px;
     font-family: Tahoma, sans-serif;
     font-weight: bolder;
 }
 
 #totalStock-color {
     color: red;
-    font-size: 40px;
+    font-size: 30px;
     font-family: Tahoma, sans-serif;
     font-weight: bolder;
 }
 
 #header-stock {
-    font-size: 40px;
+    font-size: 30px;
     font-family: Tahoma, sans-serif;
 }
 
 #header-bought{
-    font-size: 40px;
+    font-size: 30px;
     font-family: Tahoma, sans-serif;
+}
+
+p {
+    font-size: 30px;
+}
+
+ul{
+    font-size: 30px;
 }

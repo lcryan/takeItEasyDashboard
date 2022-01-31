@@ -7,21 +7,20 @@
 // Het is handig om onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken.
 // Tip: vergeet deze functie -declaratie niet aan te roepen!
 
-//Opdracht 3a.
+//Opdracht 3a.const
 
-let tvBrands = inventory.map(inventory => inventory.brand);
-console.log(tvBrands);
+list = document.getElementById('ListOfTvs');
 
-const listTvBrands = document.getElementById('listOfTvBrands');
-const tvBrandsHeader = document.createElement('h2');
-tvBrandsHeader.textContent = "We offer the following TV-Brands: ";
-listTvBrands.appendChild(tvBrandsHeader);
+inventory.map((listOfTvs) => {
+    const actualList = document.createElement('li')
+    actualList.textContent = listOfTvs.brand;
 
-const listBrands = document.createElement('p7');
-listTvBrands.textContent = tvBrands;
+    return list.appendChild(actualList);
+});
 
-listTvBrands.appendChild(tvBrandsHeader);
-listTvBrands.appendChild(tvBrands);
+//3b.
+
+//function myFunction(())
 
 
 
