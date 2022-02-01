@@ -103,13 +103,15 @@ console.log(tvPrice(inventory[6]));
 function screenSizes(array) {
     let inchToCm = array.availableSizes * 2.54;
     let sizeInCm = Math.round(inchToCm);
-    return array.availableSizes + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
+     return array.availableSizes + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
 }
 console.log(screenSizes(inventory[0]));
 
 
+
+
 // Opdracht 4d: Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de
-// pagina. Gebruik hiervoor de functies die je hebt gemaakt in opdracht 5a, 5b en 5c.
+// pagina. Gebruik hiervoor de functies die je hebt gemaakt in opdracht 3a, 3b en 3c.
 
 
 // Opdracht 4e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld.
