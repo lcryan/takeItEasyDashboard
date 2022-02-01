@@ -33,7 +33,7 @@ function listOfTvBrands(array) {
     })
 }
 
-    listOfTvBrands(inventory);
+listOfTvBrands(inventory);
 
 //eind van 3b. ------------------//
 
@@ -58,7 +58,7 @@ function listOfTvBrands(array) {
 //console.log(firstObject());
 
 // possibility 2 ;
-function getTvOut(tvDetails){
+function getTvOut(tvDetails) {
     return `${tvDetails.brand}  ${tvDetails.type} - ${tvDetails.name}`;
 }
 
@@ -91,19 +91,25 @@ console.log(tvPrice(inventory[6]));
 // Wanneer een tv vier schermgroottes heeft ([43, 50, 55, 58]) wordt de output 43 inch (109 cm) | 50 inch
 // (127 cm) | 58 inch (147 cm). Test of jouw functie werkt in alle mogelijke gevallen.
 
+//1. Schreibe eine Funktion "screenSizes", als parameter "screen size array!!![]". check!
+//2. finde heraus wie man inch in cm umwandelt : die Rechenformel check!
+//3. Der Output bei nur einer Schirmgroesse muss dann folgendes sein 32 inch (81 cm). Bei
+//4. Bei mehreren : 43 inch (109 cm) | 50 inch (127 cm) | 58 inch (147 cm);
+//5. Log den ersten Fernseher.
+//6. Teste die anderen Fernseher; crosscheck.
 
 
+//for one available size
+function screenSizes(array) {
+    let inchToCm = array.availableSizes * 2.54;
+    let sizeInCm = Math.round(inchToCm);
+    return array.availableSizes + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
+}
+console.log(screenSizes(inventory[0]));
 
 
 // Opdracht 4d: Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de
 // pagina. Gebruik hiervoor de functies die je hebt gemaakt in opdracht 5a, 5b en 5c.
-
-
-
-
-
-
-
 
 
 // Opdracht 4e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld.
