@@ -100,14 +100,29 @@ console.log(tvPrice(inventory[6]));
 
 
 //for one available size
+
 function screenSizes(array) {
-    let inchToCm = array.availableSizes * 2.54;
-    let sizeInCm = Math.round(inchToCm);
-     return array.availableSizes + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
+    if (array.availableSizes.length === 1) {
+        let inchToCm = array.availableSizes * 2.54;
+        let sizeInCm = Math.round(inchToCm);
+        return array.availableSizes + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
+    } else {
+        let blabla = "";
+        for (let i = 0; i < array.availableSizes.length; i++) {
+            let inchToCm = array.availableSizes[i] * 2.54;
+            let sizeInCm = Math.round(inchToCm);
+            blabla = blabla + array.availableSizes[i] + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
+            if (i !== array.availableSizes.length - 1) {
+                blabla = blabla + ' | ';
+            }
+        }
+        return blabla;
+    }
 }
-console.log(screenSizes(inventory[0]));
 
+console.log(screenSizes(inventory[3]));
 
+//([43, 50, 55, 58]) wordt de output 43 inch (109 cm) | 50 inch (127 cm) | 58 inch (147 cm)
 
 
 // Opdracht 4d: Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de
