@@ -139,6 +139,7 @@ console.log(screenSizes(inventory[6]));
 
 
 //logik:
+//a. TVNAME
 //1. Output von 4a muss auf der Seite sichtbar sein.
 //2. Output 4a muss in den code von 2b eingegeliedert werden - Farbe ist hierbei nicht wichtig.
 //3. Also - erstmal ein <div> erstellen im HTML <div> Info TV1> check.
@@ -146,6 +147,8 @@ console.log(screenSizes(inventory[6]));
 //5. kreiere ein neues Element <p10> fuer eine neue const detailTV1 erstellen.
 //6. detailsTV1.textcontent = getTvOut(inventory[6])
 //7. infoTVone.appendchild(...), um die Info sichtbar auf der Webseite zu machen.
+//b.TVPRICE
+//1.
 
 //start 4d.
 
@@ -153,8 +156,14 @@ const infoTvOne = document.getElementById('tvInfo');
 const detailTvOne = document.createElement('p10');
 detailTvOne.textContent = getTvOut(inventory[6]);
 
-infoTvOne.appendChild(detailTvOne);
+const pricingTvOne = document.getElementById('tvPricing')
+const priceTvOne = document.createElement('p11');
+priceTvOne.textContent = tvPrice(inventory[6]);
 
+
+
+infoTvOne.appendChild(detailTvOne);
+pricingTvOne.appendChild(priceTvOne);
 
 
 
