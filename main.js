@@ -226,11 +226,11 @@ console.log(numberSalesTv);
 // Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pagina.
 
 const tvsSold = document.getElementById('soldTvs');
-const tvsSoldHeader = document.createElement('p1');
+const tvsSoldHeader = document.createElement('div');
 tvsSoldHeader.textContent = "The amount of TVs sold today: ";
 tvsSoldHeader.setAttribute('id','sold-header');
 
-const totalSoldTvs = document.createElement('p2');
+const totalSoldTvs = document.createElement('div');
 totalSoldTvs.textContent = numberSalesTv;
 totalSoldTvs.setAttribute('id', 'sold-color');
 
@@ -255,11 +255,11 @@ console.log(purchasedTvs);
 // Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 
 const tvsBought = document.getElementById('boughtTvs');
-const tvsBoughtHeader = document.createElement('p3');
+const tvsBoughtHeader = document.createElement('div');
 tvsBoughtHeader.textContent = "Our original stock was: ";
 tvsBoughtHeader.setAttribute('id', 'header-bought');
 
-const total = document.createElement('p4');
+const total = document.createElement('div');
 total.textContent = purchasedTvs;
 total.setAttribute('id', 'purchased-color');
 
@@ -281,11 +281,11 @@ tvsBought.appendChild(total);
 // tvsSold.appendChild(totalSoldTvs);
 
 const currentStock = document.getElementById('currentStock');
-const currentStockHeader = document.createElement('p5');
+const currentStockHeader = document.createElement('div');
 currentStockHeader.textContent = "Our current stock is: ";
 currentStockHeader.setAttribute('id', 'header-stock');
 
-const totalResult = document.createElement('p6');
+const totalResult = document.createElement('div');
 totalResult.textContent = `${purchasedTvs - numberSalesTv}`;
 totalResult.setAttribute('id', 'totalStock-color');
 

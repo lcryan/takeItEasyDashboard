@@ -1,43 +1,68 @@
+h2 {
+    color: darkblue;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+}
+
 #sold-color {
     color: green;
-    font-size: 30px;
+    font-size: 20px;
     font-family: Tahoma, sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 #sold-header {
-    font-size: 30px;
+    font-size: 20px;
     font-family: Tahoma, sans-serif;
 }
 
 #purchased-color {
     color: blue;
-    font-size: 30px;
+    font-size: 20px;
     font-family: Tahoma, sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 #totalStock-color {
     color: red;
-    font-size: 30px;
+    font-size: 20px;
     font-family: Tahoma, sans-serif;
     font-weight: bolder;
 }
 
 #header-stock {
-    font-size: 30px;
+    font-size: 20px;
     font-family: Tahoma, sans-serif;
 }
 
-#header-bought{
-    font-size: 30px;
+#header-bought {
+    font-size: 20px;
     font-family: Tahoma, sans-serif;
 }
 
 p {
-    font-size: 30px;
+    font-size: 20px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
 }
 
-ul{
-    font-size: 30px;
+ul {
+    font-size: 20px;
+    font-family: Tahoma, sans-serif;
+}
+
+#detailTvOne {
+    font-size: 20px;
+    font-family: Tahoma, sans-serif;
+}
+
+#priceTVOne {
+    font-size: 20px;
+    font-family: Tahoma, sans-serif;
+
+}
+
+#availableScreeSize {
+    font-size: 20px;
+    font-family: Tahoma, sans-serif;
 }

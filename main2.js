@@ -5,6 +5,7 @@
 
 //Opdracht 3a.
 // no comment, otherwise code for 3b redundant //
+
 //const list = document.getElementById('ListOfTvs');
 
 //inventory.map((listOfTvs) => {
@@ -43,13 +44,7 @@ listOfTvBrands(inventory);
 // Philips 43PUS6504/12 - 4K TV of NIKKEI NH3216SMART - HD smart TV.
 // Test of jouw functie ook werkt wanneer er een ander tv object wordt meegegeven.
 
-//possibility 1; empty function, no parameters, still works? ;
-//function firstObject() {
-//    return inventory[5].brand + ' ' + inventory[5].type + ' ' +  '-' + ' ' + inventory[5].name;
-//}
-//console.log(firstObject());
 
-// possibility 2 ;
 function getTvOut(tvDetails) {
     return `${tvDetails.brand}  ${tvDetails.type} - ${tvDetails.name}`;
 }
@@ -141,14 +136,17 @@ function tvGenerator(array) {
 
         const detailTvOne = document.createElement('div');
         detailTvOne.textContent = getTvOut(array[i]);
+        detailTvOne.setAttribute('id','detailTvOne');
 
 
         const priceTvOne = document.createElement('div');
         priceTvOne.textContent = tvPrice(array[i]);
+        priceTvOne.setAttribute('id','priceTVOne');
 
 
         const availableScreenSizes = document.createElement('div');
         availableScreenSizes.textContent = screenSizes(array[i]);
+        availableScreenSizes.setAttribute('id','availableScreeSize');
 
 const whiteSpace = document.createElement('br')
 
