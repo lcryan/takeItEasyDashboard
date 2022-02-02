@@ -54,7 +54,7 @@ function getTvOut(tvDetails) {
     return `${tvDetails.brand}  ${tvDetails.type} - ${tvDetails.name}`;
 }
 
-console.log(getTvOut(inventory[6]));
+//console.log(getTvOut(inventory[6]));
 
 //eind opdracht 4a.---------------------------//
 
@@ -103,28 +103,28 @@ function screenSizes(array) {
 }
 
 console.log(screenSizes(inventory[6]));
+
 //eind opdracht 4c -------------------------------------//
 
 // Opdracht 4d: Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de
 // pagina. Gebruik hiervoor de functies die je hebt gemaakt in opdracht 2b, 2d en 2e.
 
-const infoTvOne = document.getElementById('tvOneInfo');
-const detailTvOne = document.createElement('p10');
-detailTvOne.textContent = getTvOut(inventory[6]);
-
-const pricingTvOne = document.getElementById('tvOnePricing')
-const priceTvOne = document.createElement('p11');
-priceTvOne.textContent = tvPrice(inventory[6]);
-
-const screenSizeTvOne = document.getElementById('tvOneScreeSize');
-const availableScreenSizes = document.createElement('p12');
-availableScreenSizes.textContent = screenSizes(inventory[6]);
-
-infoTvOne.appendChild(detailTvOne);
-pricingTvOne.appendChild(priceTvOne);
-screenSizeTvOne.appendChild(availableScreenSizes);
+// const infoTvOne = document.getElementById('tvOneInfo');
+// const detailTvOne = document.createElement('div');
+// detailTvOne.textContent = getTvOut(inventory[6]);
+//
+// const pricingTvOne = document.getElementById('tvOnePricing')
+// const priceTvOne = document.createElement('div');
+// priceTvOne.textContent = tvPrice(inventory[6]);
+//
+// const screenSizeTvOne = document.getElementById('tvOneScreeSize');
+// const availableScreenSizes = document.createElement('div');
+// availableScreenSizes.textContent = screenSizes(inventory[6]);
+//
+// infoTvOne.appendChild(detailTvOne);
+// pricingTvOne.appendChild(priceTvOne);
+// screenSizeTvOne.appendChild(availableScreenSizes);
 //eind opdracht 4d --------------------------------------//
-
 
 
 // Opdracht 4e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld.
@@ -134,17 +134,29 @@ screenSizeTvOne.appendChild(availableScreenSizes);
 // De overkoepelende "tv-generator-functie" verwacht één parameter: de volledige array met tv-objecten.
 // Vergeet 'm niet aan te roepen!
 
-//logik
-// 0. Kurze Recherche ueber syntax der Funktionen in Funktionen. check.
-// 1. Kreiere Funktion tvGenerator - wir brauchen hier ein for-loop, damit alle Fernseher im Schirm
-// durchlaufen werden.
-//2. Der Parameter fuer diese Funktion ist das vollstaendige array des Inventorys!
-// 3. Die Information, die aus dem array gezogen werden soll: (4a) brand, type, name && (4b) price && (4c)
-// (4c) screensize.
-// 4. Nutze die Informationen der anderen Funktionen, um die Werte fuer das ganze array inventory heraus
-// zu bekommen.
-
 function tvGenerator(array) {
-    let resultAll = "";
+    const infoTvOne = document.getElementById('tvOneInfo');
+    for (let i = 0; i < array.length; i++) {
 
+
+        const detailTvOne = document.createElement('div');
+        detailTvOne.textContent = getTvOut(array[i]);
+
+
+        const priceTvOne = document.createElement('div');
+        priceTvOne.textContent = tvPrice(array[i]);
+
+
+        const availableScreenSizes = document.createElement('div');
+        availableScreenSizes.textContent = screenSizes(array[i]);
+
+const whiteSpace = document.createElement('br')
+
+        infoTvOne.appendChild(detailTvOne);
+        infoTvOne.appendChild(priceTvOne);
+        infoTvOne.appendChild(availableScreenSizes);
+        infoTvOne.appendChild(whiteSpace);
+    }
 }
+
+tvGenerator(inventory);
