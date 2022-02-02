@@ -3,15 +3,8 @@
 // lijst op de pagina weer te geven. Zorg ervoor dat dit ook zou werken als we 200 tv's in onze
 // array zouden hebben staan. Dat er dubbele namen in zitten, is niet erg.
 
-
-
-//Opdracht 3a.const//
-//Opdracht 3a: Gebruik een array-methode om alle tv merken (zoals Philips, NIKKEI, etc.) in een lijst
-// op de pagina weer te geven.
-// Zorg ervoor dat dit ook zou werken als we 200 tv's in onze array zouden hebben staan.
-// Dat er dubbele namen in zitten, is niet erg.
-
-// no comment, otherwise code for 3b redundant
+//Opdracht 3a.
+// no comment, otherwise code for 3b redundant //
 //const list = document.getElementById('ListOfTvs');
 
 //inventory.map((listOfTvs) => {
@@ -115,60 +108,22 @@ console.log(screenSizes(inventory[6]));
 // Opdracht 4d: Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de
 // pagina. Gebruik hiervoor de functies die je hebt gemaakt in opdracht 2b, 2d en 2e.
 
-// Info name & description 4a :
-
-//function getTvOut(tvDetails) {
-//     return `${tvDetails.brand}  ${tvDetails.type} - ${tvDetails.name}`;
-// }
-//
-// console.log(getTvOut(inventory[6]));
-
-
-
-//const tvsSold = document.getElementById('soldTvs');
-// const tvsSoldHeader = document.createElement('p1');
-// tvsSoldHeader.textContent = "The amount of TVs sold today: ";
-// tvsSoldHeader.setAttribute('id','sold-header');
-//
-// const totalSoldTvs = document.createElement('p2');
-// totalSoldTvs.textContent = numberSalesTv;
-// totalSoldTvs.setAttribute('id', 'sold-color');
-//
-// tvsSold.appendChild(tvsSoldHeader);
-// tvsSold.appendChild(totalSoldTvs);
-
-
-//logik:
-//a. TVNAME
-//1. Output von 4a muss auf der Seite sichtbar sein.
-//2. Output 4a muss in den code von 2b eingegeliedert werden - Farbe ist hierbei nicht wichtig.
-//3. Also - erstmal ein <div> erstellen im HTML <div> Info TV1> check.
-//4. Dann im JS file fuer den div (so) das Element Id ziehen.
-//5. kreiere ein neues Element <p10> fuer eine neue const detailTV1 erstellen.
-//6. detailsTV1.textcontent = getTvOut(inventory[6])
-//7. infoTVone.appendchild(...), um die Info sichtbar auf der Webseite zu machen.
-//b.TVPRICE
-//1.
-
-//start 4d.
-
-const infoTvOne = document.getElementById('tvInfo');
+const infoTvOne = document.getElementById('tvOneInfo');
 const detailTvOne = document.createElement('p10');
 detailTvOne.textContent = getTvOut(inventory[6]);
 
-const pricingTvOne = document.getElementById('tvPricing')
+const pricingTvOne = document.getElementById('tvOnePricing')
 const priceTvOne = document.createElement('p11');
 priceTvOne.textContent = tvPrice(inventory[6]);
 
-
+const screenSizeTvOne = document.getElementById('tvOneScreeSize');
+const availableScreenSizes = document.createElement('p12');
+availableScreenSizes.textContent = screenSizes(inventory[6]);
 
 infoTvOne.appendChild(detailTvOne);
 pricingTvOne.appendChild(priceTvOne);
-
-
-
-
-
+screenSizeTvOne.appendChild(availableScreenSizes);
+//eind opdracht 4d --------------------------------------//
 
 
 
@@ -179,4 +134,17 @@ pricingTvOne.appendChild(priceTvOne);
 // De overkoepelende "tv-generator-functie" verwacht één parameter: de volledige array met tv-objecten.
 // Vergeet 'm niet aan te roepen!
 
+//logik
+// 0. Kurze Recherche ueber syntax der Funktionen in Funktionen. check.
+// 1. Kreiere Funktion tvGenerator - wir brauchen hier ein for-loop, damit alle Fernseher im Schirm
+// durchlaufen werden.
+//2. Der Parameter fuer diese Funktion ist das vollstaendige array des Inventorys!
+// 3. Die Information, die aus dem array gezogen werden soll: (4a) brand, type, name && (4b) price && (4c)
+// (4c) screensize.
+// 4. Nutze die Informationen der anderen Funktionen, um die Werte fuer das ganze array inventory heraus
+// zu bekommen.
 
+function tvGenerator(array) {
+    let resultAll = "";
+
+}
