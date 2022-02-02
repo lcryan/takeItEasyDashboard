@@ -136,19 +136,19 @@ function tvGenerator(array) {
 
         const detailTvOne = document.createElement('div');
         detailTvOne.textContent = getTvOut(array[i]);
-        detailTvOne.setAttribute('id','detailTvOne');
+        detailTvOne.setAttribute('id', 'detailTvOne');
 
 
         const priceTvOne = document.createElement('div');
         priceTvOne.textContent = tvPrice(array[i]);
-        priceTvOne.setAttribute('id','priceTVOne');
+        priceTvOne.setAttribute('id', 'priceTVOne');
 
 
         const availableScreenSizes = document.createElement('div');
         availableScreenSizes.textContent = screenSizes(array[i]);
-        availableScreenSizes.setAttribute('id','availableScreeSize');
+        availableScreenSizes.setAttribute('id', 'availableScreeSize');
 
-const whiteSpace = document.createElement('br')
+        const whiteSpace = document.createElement('br')
 
         infoTvOne.appendChild(detailTvOne);
         infoTvOne.appendChild(priceTvOne);
