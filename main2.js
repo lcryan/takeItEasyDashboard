@@ -3,12 +3,15 @@
 // lijst op de pagina weer te geven. Zorg ervoor dat dit ook zou werken als we 200 tv's in onze
 // array zouden hebben staan. Dat er dubbele namen in zitten, is niet erg.
 
-// Opdracht 3b: Schrijf de code uit 3a om naar een functie die een array met tv-objecten verwacht.
-// Het is handig om onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken.
-// Tip: vergeet deze functie -declaratie niet aan te roepen!
 
-//Opdracht 3a.const
 
+//Opdracht 3a.const//
+//Opdracht 3a: Gebruik een array-methode om alle tv merken (zoals Philips, NIKKEI, etc.) in een lijst
+// op de pagina weer te geven.
+// Zorg ervoor dat dit ook zou werken als we 200 tv's in onze array zouden hebben staan.
+// Dat er dubbele namen in zitten, is niet erg.
+
+// no comment, otherwise code for 3b redundant
 //const list = document.getElementById('ListOfTvs');
 
 //inventory.map((listOfTvs) => {
@@ -21,6 +24,9 @@
 
 
 //3b.
+// Opdracht 3b: Schrijf de code uit 3a om naar een functie die een array met tv-objecten verwacht.
+// Het is handig om onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken.
+// Tip: vergeet deze functie -declaratie niet aan te roepen!
 
 function listOfTvBrands(array) {
     const list = document.getElementById('ListOfTvs');
@@ -43,15 +49,8 @@ listOfTvBrands(inventory);
 // verwacht en de naam op de volgende manier samenvoegt: [merk] [type] - [naam] zoals
 // Philips 43PUS6504/12 - 4K TV of NIKKEI NH3216SMART - HD smart TV.
 // Test of jouw functie ook werkt wanneer er een ander tv object wordt meegegeven.
-//Logica :
-//1. Schreibe eine Funktion und benutze array methode map ?? Und dann in string?? Recherche!
-// . Marke, Typ und Name muesen wie oben
-//dargestellt werden. - brand, name, type
-//2. Log und teste ob es geht.
-//3. Log die Funktion mit einem anderen Fernseher, um nochmal zu testen, ob es auch auf andere andgewendet
-//werden kann.
 
-//possibility 1 ;
+//possibility 1; empty function, no parameters, still works? ;
 //function firstObject() {
 //    return inventory[5].brand + ' ' + inventory[5].type + ' ' +  '-' + ' ' + inventory[5].name;
 //}
@@ -91,42 +90,77 @@ console.log(tvPrice(inventory[6]));
 // Wanneer een tv vier schermgroottes heeft ([43, 50, 55, 58]) wordt de output 43 inch (109 cm) | 50 inch
 // (127 cm) | 58 inch (147 cm). Test of jouw functie werkt in alle mogelijke gevallen.
 
-//1. Schreibe eine Funktion "screenSizes", als parameter "screen size array!!![]". check!
-//2. finde heraus wie man inch in cm umwandelt : die Rechenformel check!
-//3. Der Output bei nur einer Schirmgroesse muss dann folgendes sein 32 inch (81 cm). Bei
-//4. Bei mehreren : 43 inch (109 cm) | 50 inch (127 cm) | 58 inch (147 cm);
-//5. Log den ersten Fernseher.
-//6. Teste die anderen Fernseher; crosscheck.
-
-
-//for one available size
-
 function screenSizes(array) {
     if (array.availableSizes.length === 1) {
         let inchToCm = array.availableSizes * 2.54;
         let sizeInCm = Math.round(inchToCm);
         return array.availableSizes + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
     } else {
-        let blabla = "";
+        let output = "";
         for (let i = 0; i < array.availableSizes.length; i++) {
             let inchToCm = array.availableSizes[i] * 2.54;
             let sizeInCm = Math.round(inchToCm);
-            blabla = blabla + array.availableSizes[i] + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
+            output = output + array.availableSizes[i] + ' ' + "inch" + ' ' + '(' + sizeInCm + "cm" + ')';
             if (i !== array.availableSizes.length - 1) {
-                blabla = blabla + ' | ';
+                output = output + ' | ';
             }
         }
-        return blabla;
+        return output;
     }
 }
 
-console.log(screenSizes(inventory[3]));
-
-//([43, 50, 55, 58]) wordt de output 43 inch (109 cm) | 50 inch (127 cm) | 58 inch (147 cm)
-
+console.log(screenSizes(inventory[6]));
+//eind opdracht 4c -------------------------------------//
 
 // Opdracht 4d: Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de
-// pagina. Gebruik hiervoor de functies die je hebt gemaakt in opdracht 3a, 3b en 3c.
+// pagina. Gebruik hiervoor de functies die je hebt gemaakt in opdracht 2b, 2d en 2e.
+
+// Info name & description 4a :
+
+//function getTvOut(tvDetails) {
+//     return `${tvDetails.brand}  ${tvDetails.type} - ${tvDetails.name}`;
+// }
+//
+// console.log(getTvOut(inventory[6]));
+
+
+
+//const tvsSold = document.getElementById('soldTvs');
+// const tvsSoldHeader = document.createElement('p1');
+// tvsSoldHeader.textContent = "The amount of TVs sold today: ";
+// tvsSoldHeader.setAttribute('id','sold-header');
+//
+// const totalSoldTvs = document.createElement('p2');
+// totalSoldTvs.textContent = numberSalesTv;
+// totalSoldTvs.setAttribute('id', 'sold-color');
+//
+// tvsSold.appendChild(tvsSoldHeader);
+// tvsSold.appendChild(totalSoldTvs);
+
+
+//logik:
+//1. Output von 4a muss auf der Seite sichtbar sein.
+//2. Output 4a muss in den code von 2b eingegeliedert werden - Farbe ist hierbei nicht wichtig.
+//3. Also - erstmal ein <div> erstellen im HTML <div> Info TV1> check.
+//4. Dann im JS file fuer den div (so) das Element Id ziehen.
+//5. kreiere ein neues Element <p10> fuer eine neue const detailTV1 erstellen.
+//6. detailsTV1.textcontent = getTvOut(inventory[6])
+//7. infoTVone.appendchild(...), um die Info sichtbar auf der Webseite zu machen.
+
+//start 4d.
+
+const infoTvOne = document.getElementById('tvInfo');
+const detailTvOne = document.createElement('p10');
+detailTvOne.textContent = getTvOut(inventory[6]);
+
+infoTvOne.appendChild(detailTvOne);
+
+
+
+
+
+
+
 
 
 // Opdracht 4e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld.
