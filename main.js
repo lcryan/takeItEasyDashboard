@@ -228,7 +228,7 @@ console.log(numberSalesTv);
 const tvsSold = document.getElementById('soldTvs');
 const tvsSoldHeader = document.createElement('div');
 tvsSoldHeader.textContent = "The amount of TVs sold today: ";
-tvsSoldHeader.setAttribute('id','sold-header');
+tvsSoldHeader.setAttribute('id', 'sold-header');
 
 const totalSoldTvs = document.createElement('div');
 totalSoldTvs.textContent = numberSalesTv;
